@@ -6,6 +6,8 @@ Differences between original repository and fork:
 * Installation with [requirements.txt](requirements.txt) file.
 * Model is used for inference by default by setting pretrain to False in the [config.py](data/config.py) file.
 * Minor modifications in the [detect.py](detect.py) file.
+* The following deprecations has been fixed:
+  * UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future.  
 
 # Installation
 
