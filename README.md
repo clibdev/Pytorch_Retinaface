@@ -1,3 +1,19 @@
+# Fork of [biubug6/Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
+
+Differences between original repository and fork:
+
+* Compatibility with PyTorch >=2.0. (🔥)
+* Installation with [requirements.txt](requirements.txt) file.
+* Model is used for inference by default by setting pretrain to False in the [config.py](data/config.py) file.
+
+# Installation
+
+```shell
+pip install -r requirements.txt
+```
+
+
+
 # RetinaFace in PyTorch
 
 A [PyTorch](https://pytorch.org/) implementation of [RetinaFace: Single-stage Dense Face Localisation in the Wild](https://arxiv.org/abs/1905.00641). Model size only 1.7M, when Retinaface use mobilenet0.25 as backbone net. We also provide resnet50 as backbone net to get better result. The official code in Mxnet can be found [here](https://github.com/deepinsight/insightface/tree/master/RetinaFace).
