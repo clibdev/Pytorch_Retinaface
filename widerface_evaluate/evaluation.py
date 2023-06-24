@@ -12,7 +12,6 @@ import argparse
 import numpy as np
 from scipy.io import loadmat
 from bbox import bbox_overlaps
-from IPython import embed
 
 
 def get_gt_boxes(gt_dir):
@@ -92,7 +91,7 @@ def read_pred_file(filepath):
     boxes = []
     for line in lines:
         line = line.rstrip('\r\n').split(' ')
-        if line[0] is '':
+        if line[0] == '':
             continue
         # a = float(line[4])
         boxes.append([float(line[0]), float(line[1]), float(line[2]), float(line[3]), float(line[4])])

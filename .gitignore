@@ -3,6 +3,7 @@
 *.pth
 *.onnx
 *.tar
+/data/widerface/val/images
 /widerface_evaluate/widerface_txt
 /widerface_evaluate/box_overlaps.c
 /widerface_evaluate/**/*.so
