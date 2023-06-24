@@ -5,6 +5,7 @@ Differences between original repository and fork:
 * Compatibility with PyTorch >=2.0. (🔥)
 * Installation with [requirements.txt](requirements.txt) file.
 * Model is used for inference by default by setting pretrain to False in the [config.py](data/config.py) file.
+* Minor modifications in the [detect.py](detect.py) file.
 
 # Installation
 
