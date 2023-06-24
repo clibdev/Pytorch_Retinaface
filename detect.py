@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(description='Retinaface')
 parser.add_argument('-m', '--trained_model', default='./weights/Resnet50_Final.pth',
                     type=str, help='Trained state_dict file path to open')
 parser.add_argument('--network', default='resnet50', help='Backbone network mobile0.25 or resnet50')
+parser.add_argument('--image_path', default='./curve/test.jpg', help='Image path')
 parser.add_argument('--cpu', action="store_true", default=False, help='Use cpu inference')
 parser.add_argument('--confidence_threshold', default=0.02, type=float, help='confidence_threshold')
 parser.add_argument('--top_k', default=5000, type=int, help='top_k')
@@ -83,8 +84,7 @@ if __name__ == '__main__':
     resize = 1
 
     # testing begin
-    image_path = "./curve/test.jpg"
-    img_raw = cv2.imread(image_path, cv2.IMREAD_COLOR)
+    img_raw = cv2.imread(args.image_path, cv2.IMREAD_COLOR)
 
     img = np.float32(img_raw)
 

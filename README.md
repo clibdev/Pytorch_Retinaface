@@ -15,6 +15,12 @@ Differences between original repository and fork:
 pip install -r requirements.txt
 ```
 
+# Inference
+
+```shell
+python detect.py --trained_model weights/Resnet50_Final.pth --network resnet50 --image_path curve/test.jpg
+python detect.py --trained_model weights/mobilenet0.25_Final.pth --network mobile0.25 --image_path curve/test.jpg
+```
 
 
 # RetinaFace in PyTorch
