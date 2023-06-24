@@ -71,18 +71,18 @@ if __name__ == '__main__':
     net = load_model(net, args.trained_model, args.cpu)
     net.eval()
     print('Finished loading model!')
-    print(net)
+
     device = torch.device("cpu" if args.cpu else "cuda")
     net = net.to(device)
 
     # ------------------------ export -----------------------------
-    output_onnx = 'FaceDetector.onnx'
+    output_onnx = os.path.splitext(args.trained_model)[0] + '.onnx'
     print("==> Exporting model to ONNX format at '{}'".format(output_onnx))
     input_names = ["input0"]
     output_names = ["output0"]
     inputs = torch.randn(1, 3, args.long_side, args.long_side).to(device)
 
-    torch_out = torch.onnx._export(net, inputs, output_onnx, export_params=True, verbose=False,
-                                   input_names=input_names, output_names=output_names)
+    torch.onnx.export(net, inputs, output_onnx, export_params=True, verbose=False,
+                      input_names=input_names, output_names=output_names, opset_version=18)
 
 

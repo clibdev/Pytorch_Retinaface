@@ -5,9 +5,10 @@ Differences between original repository and fork:
 * Compatibility with PyTorch >=2.0. (🔥)
 * Installation with [requirements.txt](requirements.txt) file.
 * Model is used for inference by default by setting pretrain to False in the [config.py](data/config.py) file.
-* Minor modifications in the [detect.py](detect.py) file.
+* Minor modifications in the [detect.py](detect.py) and [convert_to_onnx.py](convert_to_onnx.py) file.
 * The following deprecations has been fixed:
   * UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future.  
+  * FutureWarning: 'torch.onnx._export' is deprecated in version 1.12.0 and will be removed in 2.0.
 
 # Installation
 
@@ -21,6 +22,19 @@ pip install -r requirements.txt
 python detect.py --trained_model weights/Resnet50_Final.pth --network resnet50 --image_path curve/test.jpg
 python detect.py --trained_model weights/mobilenet0.25_Final.pth --network mobile0.25 --image_path curve/test.jpg
 ```
+
+# Export to ONNX format
+
+```shell
+pip install onnx
+```
+```shell
+python convert_to_onnx.py --trained_model weights/Resnet50_Final.pth --network resnet50
+python convert_to_onnx.py --trained_model weights/mobilenet0.25_Final.pth --network mobile0.25
+```
+
+
+
 
 
 # RetinaFace in PyTorch
