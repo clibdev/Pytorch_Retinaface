@@ -3,6 +3,7 @@
 Differences between original repository and fork:
 
 * Compatibility with PyTorch >=2.0. (🔥)
+* Original pretrained models and converted ONNX models from GitHub [releases page](https://github.com/clibdev/Pytorch_Retinaface/releases). (🔥)
 * Installation with [requirements.txt](requirements.txt) file.
 * Model is used for inference by default by setting pretrain to False in the [config.py](data/config.py) file.
 * Minor modifications in the [detect.py](detect.py) and [convert_to_onnx.py](convert_to_onnx.py) file.
@@ -15,6 +16,15 @@ Differences between original repository and fork:
 ```shell
 pip install -r requirements.txt
 ```
+
+# Pretrained models
+
+| Name                                               | Easy  | Medium | Hard  | Link                                                                                                                                                                                                               |
+|----------------------------------------------------|-------|--------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Resnet50 backbone (same parameter with Mxnet)      | 94.82 | 93.84  | 89.60 | [PyTorch](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/Resnet50_Final.pth), [ONNX](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/Resnet50_Final.onnx)           |
+| Resnet50 backbone (original image scale)           | 95.48 | 94.04  | 84.43 | [PyTorch](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/Resnet50_Final.pth), [ONNX](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/Resnet50_Final.onnx)           |
+| Mobilenet0.25 backbone (same parameter with Mxnet) | 88.67 | 87.09  | 80.99 | [PyTorch](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/mobilenet0.25_Final.pth), [ONNX](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/mobilenet0.25_Final.onnx) |
+| Mobilenet0.25 backbone (original image scale)      | 90.70 | 88.16  | 73.82 | [PyTorch](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/mobilenet0.25_Final.pth), [ONNX](https://github.com/clibdev/Pytorch_Retinaface/releases/latest/download/mobilenet0.25_Final.onnx) |
 
 # Inference
 
